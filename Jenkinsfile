@@ -54,7 +54,7 @@ pipeline {
                 // until we switch to the new kubernetes / jenkins credential implementation use git credentials store
                 sh "git config --global credential.helper store"
                 sh "jx step validate --min-jx-version 1.1.73"
-                sh "jx step git credentials"
+                sh "sudo jx step git credentials"
 
                 sh "make tag"
             }
